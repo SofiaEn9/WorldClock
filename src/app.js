@@ -13,7 +13,7 @@ function updateTime() {
   let newYorkTime = moment().tz("America/New_York");
 
   newYorkDateElement.innerHTML = newYorkTime.format("dddd, MMMM Do");
-  newYorkTimeElement.innerHTML = newYorkTime.format("HH:mm");
+  newYorkTimeElement.innerHTML = newYorkTime.format("HH:mm:ss");
 
   let parisElement = document.querySelector("#paris");
   let parisDateElement = parisElement.querySelector(".date");
@@ -21,7 +21,7 @@ function updateTime() {
   let parisTime = moment().tz("Europe/Paris");
 
   parisDateElement.innerHTML = parisTime.format("dddd, MMMM Do");
-  parisTimeElement.innerHTML = parisTime.format("HH:mm");
+  parisTimeElement.innerHTML = parisTime.format("HH:mm:ss");
 
   let tokyoElement = document.querySelector("#tokyo");
   let tokyoDateElement = tokyoElement.querySelector(".date");
@@ -29,7 +29,7 @@ function updateTime() {
   let tokyoTime = moment().tz("Asia/Tokyo");
 
   tokyoDateElement.innerHTML = tokyoTime.format("dddd, MMMM Do");
-  tokyoTimeElement.innerHTML = tokyoTime.format("HH:mm");
+  tokyoTimeElement.innerHTML = tokyoTime.format("HH:mm:ss");
 }
 
 function updateCity(event) {
@@ -43,7 +43,7 @@ function updateCity(event) {
   citiesElement.innerHTML += `
   <div class="searchedCity">
     <div class="city">${cityName}</div>
-    <div class="time">${cityTime.format("HH:mm")}</div>
+    <div class="time">${cityTime.format("HH:mm:ss")}</div>
     <div class="date">${cityTime.format("dddd, MMMM Do")}</div>
   </div>
   `;
