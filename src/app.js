@@ -6,6 +6,30 @@ function updateTime() {
 
   chihuahuaDateElement.innerHTML = chihuahuaTime.format("dddd, MMMM Do");
   chihuahuaTimeElement.innerHTML = chihuahuaTime.format("HH:mm");
+
+  let newYorkElement = document.querySelector("#new-york");
+  let newYorkDateElement = newYorkElement.querySelector(".date");
+  let newYorkTimeElement = newYorkElement.querySelector(".time");
+  let newYorkTime = moment().tz("America/New_York");
+
+  newYorkDateElement.innerHTML = newYorkTime.format("dddd, MMMM Do");
+  newYorkTimeElement.innerHTML = newYorkTime.format("HH:mm");
+
+  let parisElement = document.querySelector("#paris");
+  let parisDateElement = parisElement.querySelector(".date");
+  let parisTimeElement = parisElement.querySelector(".time");
+  let parisTime = moment().tz("Europe/Paris");
+
+  parisDateElement.innerHTML = parisTime.format("dddd, MMMM Do");
+  parisTimeElement.innerHTML = parisTime.format("HH:mm");
+
+  let tokyoElement = document.querySelector("#tokyo");
+  let tokyoDateElement = tokyoElement.querySelector(".date");
+  let tokyoTimeElement = tokyoElement.querySelector(".time");
+  let tokyoTime = moment().tz("Asia/Tokyo");
+
+  tokyoDateElement.innerHTML = tokyoTime.format("dddd, MMMM Do");
+  tokyoTimeElement.innerHTML = tokyoTime.format("HH:mm");
 }
 
 function updateCity(event) {
