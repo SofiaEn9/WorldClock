@@ -1,6 +1,8 @@
 * {
   /* text-align: center; */
   font-family: helvetica, arial;
+  width: 100%;
+  backdrop-filter: brightness(50%);
 }
 
 body {
@@ -9,12 +11,7 @@ body {
 }
 
 .background-image {
-  background-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.3) 100%,
-      rgba(0, 0, 0, 0.3) 100%
-    ),
-    url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/091/376/original/cottage-lake.jpg?1690473899);
+  background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/091/465/original/cottage-lake.png?1690574582);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -23,7 +20,6 @@ body {
   display: block;
   margin: 0 auto;
   padding-top: 90px;
-  width: 75%;
 }
 
 select {

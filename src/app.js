@@ -49,6 +49,24 @@ function updateCity(event) {
   `;
 }
 
+function changeBg() {
+  let images = [
+    "url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/091/376/original/cottage-lake.jpg?1690473899)",
+    // "url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/091/460/original/autumn-forest.jpg?1690571899)",
+    "url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/091/461/original/bridge-sunset.jpg?1690571915)",
+    "url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/091/462/original/island-sunset.jpg?1690571924)",
+    "url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/091/463/original/sarlsburg-unsplash.jpg?1690571934)",
+    "url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/091/464/original/violet-sky-unsplash.jpg?1690571943)",
+  ];
+
+  let backgroundImage = document.querySelector("#background-image");
+  let changeBackgroundImage = images[Math.floor(Math.random() * images.length)];
+
+  backgroundImage.style.backgroundImage = changeBackgroundImage;
+}
+
+setInterval(changeBg, 5000);
+
 updateTime();
 setInterval(updateTime, 1000);
 
