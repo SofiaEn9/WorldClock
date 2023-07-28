@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.43/moment-timezone-with-data-1970-2030.min.js"></script>
     <title>World Clock ⏲</title>
   </head>
   <body>
@@ -15,37 +17,38 @@
           <option value=""></option>
           <option value=""></option>
         </select>
-        <div class="main-city-element">
+        <div class="main-city-element" id="chihuahua">
           <div class="main-city">Chihuahua</div>
           <div class="main-time">
-            <strong>03:09<span class="am-pm"> PM</span></strong>
+            <div class="main-am-pm"></div>
           </div>
-          <div class="main-date">Wednesday, July 26</div>
+          <div class="main-date"></div>
         </div>
         <div class="secondary-city-elements">
-          <div>
-            <div class="city-secondary">New York</div>
-            <div class="time-secondary">
-              07:09 <span class="am-pm-secondary">PM</span>
-            </div>
-            <div class="date-secondary">Wednesday, July 26</div>
+          <div id="new-york">
+            <div class="city">New York</div>
+            <div class="time">07:09 <span class="am-pm">PM</span></div>
+            <div class="date">Wednesday, July 26</div>
           </div>
           <div>
-            <div class="city-secondary">Paris</div>
-            <div class="time-secondary">11:09
-              <span class="am-pm-secondary">PM</span>
+            <div class="city">Paris</div>
+            <div class="time">
+              11:09
+              <span class="am-pm">PM</span>
             </div>
-            <div class="date-secondary"">Wednesday, July 26</div>
-          </div>
-          <div>
-            <div class="city-secondary">Tokyo</div>
-            <div class="time-secondary">05:09
-              <span class="am-pm-secondary">AM</span>
-            </div>
-            <div class="date-secondary">Thursday, July 27</div>
+            <div class="date"">Wednesday, July 26
           </div>
         </div>
+        <div>
+          <div class="city">Tokyo</div>
+          <div class="time">
+            05:09
+            <span class="am-pm">AM</span>
+          </div>
+          <div class="date">Thursday, July 27</div>
+        </div>
       </div>
+      <!-- </div> -->
     </div>
     <footer>
       <a href="https://github.com/SofiaEn9/WorldClock" target="_blank"
