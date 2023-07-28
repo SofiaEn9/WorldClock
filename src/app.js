@@ -2,10 +2,10 @@ function updateTime() {
   let chihuahuaElement = document.querySelector("#chihuahua");
   let chihuahuaDateElement = chihuahuaElement.querySelector(".main-date");
   let chihuahuaTimeElement = chihuahuaElement.querySelector(".main-time");
-  let chihuahuaTime = moment().tz("America/Chihuahua");
+  let chihuahuaTimezone = moment().tz("America/Chihuahua");
 
-  chihuahuaDateElement.innerHTML = chihuahuaTime.format("dddd, MMMM Do");
-  chihuahuaTimeElement.innerHTML = chihuahuaTime.format("HH:mm");
+  chihuahuaDateElement.innerHTML = chihuahuaTimezone.format("dddd, MMMM Do");
+  chihuahuaTimeElement.innerHTML = chihuahuaTimezone.format("HH:mm");
 
   let newYorkElement = document.querySelector("#new-york");
   let newYorkDateElement = newYorkElement.querySelector(".date");
@@ -34,6 +34,9 @@ function updateTime() {
 
 function updateCity(event) {
   let cityTimezone = event.target.value;
+  if (cityTimezone === "current") {
+    cityTimezone === moment.tz.guess();
+  }
   cityName = cityTimezone.replace("_", " ").split("/")[1];
   cityTime = moment().tz(cityTimezone);
   let citiesElement = document.querySelector("#cities");
