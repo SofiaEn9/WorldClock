@@ -1,7 +1,6 @@
 * {
   /* text-align: center; */
   font-family: helvetica, arial;
-  width: 100%;
   backdrop-filter: brightness(50%);
 }
 
@@ -91,7 +90,8 @@ select {
 .reset-link {
   color: rgba(255, 255, 255, 0.6);
   display: block;
-  padding-bottom: 15px;
+  padding-bottom: 30px;
+  font-size: 14px;
 }
 
 footer,
@@ -100,5 +100,5 @@ a {
   font-size: 13px;
   text-align: center;
   bottom: 5%;
-  padding: 8px;
+  padding: 7px;
 }
